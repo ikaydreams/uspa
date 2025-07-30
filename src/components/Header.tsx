@@ -64,7 +64,7 @@ const Header: React.FC = () => {
               {/* Hot Tubs Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200">
-                  Hot Tubs
+                  Spa's
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-card border-border z-50">
