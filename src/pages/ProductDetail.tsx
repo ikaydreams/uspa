@@ -76,7 +76,7 @@ const ProductDetail: React.FC = () => {
       series: "Performance Class Swim Series™",
       description:
         "The S150 from our Performance Class Swim Series™ is designed for fitness and relaxation, offering a spacious swim area and powerful swim jets.",
-      image: "https://via.placeholder.com/600x400?text=S150+Swim+Spa",
+      image: "/compressed_S2006728.jpg",
       features: [
         "Powerful swim jets for resistance training",
         "Spacious swim area for family fun",
