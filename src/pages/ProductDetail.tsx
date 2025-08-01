@@ -57,7 +57,7 @@ const ProductDetail: React.FC = () => {
       series: "Comfort Class X Series™",
       description:
         "The X6 from our Comfort Class X Series™ offers affordable comfort with durable construction and powerful hydrotherapy jets.",
-      image: "https://via.placeholder.com/600x400?text=X6+Hot+Tub",
+      image: "/compressed_Swim-Series_Timber-Snow_Lifestyle_AC5I8872.jpg",
       features: [
         "High-performance jets for effective hydrotherapy",
         "Durable construction for long-lasting use",
