@@ -19,7 +19,7 @@ const ProductDetail: React.FC = () => {
       series: "Elite Class M Series™",
       description:
         "The M8 from our Elite Class M Series™ offers unparalleled luxury with advanced JetPak Therapy Systems, premium insulation, and seating for up to 8 people.",
-      image: "https://via.placeholder.com/600x400?text=M8+Hot+Tub",
+      image: "/compressed_16_couple_4.jpg",
       features: [
         "Customizable JetPak Therapy System for personalized hydrotherapy",
         "Premium Full Foam Insulation for energy efficiency",
@@ -38,7 +38,7 @@ const ProductDetail: React.FC = () => {
       series: "Luxury Class A Series™",
       description:
         "The A7 from our Luxury Class A Series™ combines elegance and performance with customizable jets and a sleek design for ultimate relaxation.",
-      image: "https://via.placeholder.com/600x400?text=A7+Hot+Tub",
+      image: "/compressed_rooftop_jpexchange.jpg",
       features: [
         "Advanced JetPak Therapy System",
         "Energy-efficient design with eco-friendly materials",
