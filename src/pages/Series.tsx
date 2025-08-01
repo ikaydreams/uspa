@@ -13,25 +13,25 @@ const Series: React.FC = () => {
       id: "m-series",
       name: "Elite Class M Series™",
       description: "Premium hot tubs with advanced JetPak Therapy Systems and luxurious design for ultimate relaxation.",
-      image: "https://via.placeholder.com/300x200?text=M+Series",
+      image: "/compressed_20241008_BF_KWP_DAY01_SHOT06_2743.jpg",
     },
     {
       id: "a-series",
       name: "Luxury Class A Series™",
       description: "High-end hot tubs offering customizable hydrotherapy and energy-efficient performance.",
-      image: "https://via.placeholder.com/300x200?text=A+Series",
+      image: "/A_Series_HGTV_2024_2.jpg",
     },
     {
       id: "x-series",
       name: "Comfort Class X Series™",
       description: "Affordable yet durable hot tubs with powerful jets and comfortable seating.",
-      image: "https://via.placeholder.com/300x200?text=X+Series",
+      image: "/1I7A2999.jpg",
     },
     {
       id: "swim-series",
       name: "Performance Class Swim Series™",
       description: "Spacious swim spas designed for fitness, relaxation, and family fun.",
-      image: "https://via.placeholder.com/300x200?text=Swim+Series",
+      image: "/compressed_AC5I2997.jpg",
     },
   ];
 
