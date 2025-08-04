@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -10,29 +11,101 @@ interface Product {
   specs: { [key: string]: string };
 }
 
+const mSeriesProducts: Product[] = [
+  {
+    name: "M9 Hot Tub",
+    series: "Elite Class M Series™",
+    description: "The M9 is the largest, most luxurious M Series spa, offering maximum seating and premium features.",
+    image: "/images/mseries/m9.jpg",
+    features: [
+      "Largest seating capacity in the M Series",
+      "Advanced JetPak Therapy System",
+      "Premium lighting and water features",
+      "Energy-efficient insulation",
+    ],
+    specs: {
+      dimensions: "7'10\" x 9'2\" x 38\"",
+      capacity: "10 adults",
+      waterCapacity: "550 gallons",
+      weight: "950 lbs (dry)",
+    },
+  },
+  {
+    name: "M8 Hot Tub",
+    series: "Elite Class M Series™",
+    description: "The M8 offers unparalleled luxury with advanced JetPak Therapy Systems, premium insulation, and seating for up to 8 people.",
+    image: "/images/mseries/m8.jpg",
+    features: [
+      "Customizable JetPak Therapy System for personalized hydrotherapy",
+      "Premium Full Foam Insulation for energy efficiency",
+      "Spacious seating for up to 8 adults",
+      "Multi-color LED lighting and waterfall features",
+    ],
+    specs: {
+      dimensions: "7'10\" x 7'10\" x 38\"",
+      capacity: "8 adults",
+      waterCapacity: "425 gallons",
+      weight: "800 lbs (dry)",
+    },
+  },
+  {
+    name: "M7 Hot Tub",
+    series: "Elite Class M Series™",
+    description: "The M7 is the perfect balance of size and features, ideal for families and entertaining.",
+    image: "/images/mseries/m7.jpg",
+    features: [
+      "Spacious seating for up to 7 adults",
+      "JetPak Therapy System",
+      "Modern design with premium finishes",
+      "LED lighting package",
+    ],
+    specs: {
+      dimensions: "7'7\" x 7'7\" x 37\"",
+      capacity: "7 adults",
+      waterCapacity: "400 gallons",
+      weight: "750 lbs (dry)",
+    },
+  },
+];
+
 const ProductDetail: React.FC = () => {
   const { seriesId } = useParams<{ seriesId: string }>();
 
+  if (seriesId === "m-series") {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-poppins font-bold text-foreground mb-6">Elite Class M Series™</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {mSeriesProducts.map((product) => (
+            <div key={product.name} className="bg-card border rounded-lg p-4 flex flex-col">
+              <img src={product.image} alt={product.name} className="w-full h-auto rounded mb-4" />
+              <h2 className="text-xl font-semibold">{product.name}</h2>
+              <p className="text-muted-foreground mb-2">{product.description}</p>
+              <h3 className="font-semibold mt-2">Features</h3>
+              <ul className="list-disc list-inside text-muted-foreground mb-2">
+                {product.features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
+              </ul>
+              <h3 className="font-semibold">Specifications</h3>
+              <ul className="text-muted-foreground mb-4">
+                {Object.entries(product.specs).map(([key, value]) => (
+                  <li key={key} className="capitalize">
+                    {key.replace(/([A-Z])/g, " $1").toLowerCase()}: {value}
+                  </li>
+                ))}
+              </ul>
+              <Button asChild>
+                <Link to="/stores">Find a Store</Link>
+              </Button>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   const products: { [key: string]: Product } = {
-    "m-series": {
-      name: "M8 Hot Tub",
-      series: "Elite Class M Series™",
-      description:
-        "The M8 from our Elite Class M Series™ offers unparalleled luxury with advanced JetPak Therapy Systems, premium insulation, and seating for up to 8 people.",
-      image: "/compressed_16_couple_4.jpg",
-      features: [
-        "Customizable JetPak Therapy System for personalized hydrotherapy",
-        "Premium Full Foam Insulation for energy efficiency",
-        "Spacious seating for up to 8 adults",
-        "Multi-color LED lighting and waterfall features",
-      ],
-      specs: {
-        dimensions: "7'10\" x 7'10\" x 38\"",
-        capacity: "8 adults",
-        waterCapacity: "425 gallons",
-        weight: "800 lbs (dry)",
-      },
-    },
     "a-series": {
       name: "A7 Hot Tub",
       series: "Luxury Class A Series™",
@@ -142,3 +215,4 @@ const ProductDetail: React.FC = () => {
 };
 
 export default ProductDetail;
+
