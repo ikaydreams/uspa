@@ -17,7 +17,7 @@ const mSeriesProducts: Product[] = [
     name: "M9 Hot Tub",
     series: "Elite Class M Series™",
     description: "The M9 is the largest, most luxurious M Series spa, offering maximum seating and premium features.",
-    image: "/images/mseries/m9.jpg",
+    image: "/M9.webp",
     features: [
       "Largest seating capacity in the M Series",
       "Advanced JetPak Therapy System",
@@ -35,7 +35,7 @@ const mSeriesProducts: Product[] = [
     name: "M8 Hot Tub",
     series: "Elite Class M Series™",
     description: "The M8 offers unparalleled luxury with advanced JetPak Therapy Systems, premium insulation, and seating for up to 8 people.",
-    image: "/images/mseries/m8.jpg",
+    image: "/M8.webp",
     features: [
       "Customizable JetPak Therapy System for personalized hydrotherapy",
       "Premium Full Foam Insulation for energy efficiency",
@@ -53,7 +53,7 @@ const mSeriesProducts: Product[] = [
     name: "M7 Hot Tub",
     series: "Elite Class M Series™",
     description: "The M7 is the perfect balance of size and features, ideal for families and entertaining.",
-    image: "/images/mseries/m7.jpg",
+    image: "/M7.webp",
     features: [
       "Spacious seating for up to 7 adults",
       "JetPak Therapy System",
@@ -75,7 +75,7 @@ const aSeriesProducts: Product[] = [
     name: "A9L Hot Tub",
     series: "Luxury Class A Series™",
     description: "The A9L offers spacious luxury with advanced hydrotherapy and premium features.",
-    image: "/images/aseries/a9l.jpg",
+    image: "/A9L_Top-Down.webp",
     features: [
       "Spacious seating for up to 8 adults",
       "JetPak Therapy System",
@@ -93,7 +93,7 @@ const aSeriesProducts: Product[] = [
     name: "A8 Hot Tub",
     series: "Luxury Class A Series™",
     description: "The A8 combines elegance and performance with customizable jets and a sleek design for ultimate relaxation.",
-    image: "/images/aseries/a8.jpg",
+    image: "/A8_Top-Down.webp",
     features: [
       "Advanced JetPak Therapy System",
       "Energy-efficient design with eco-friendly materials",
@@ -111,7 +111,7 @@ const aSeriesProducts: Product[] = [
     name: "A7 Hot Tub",
     series: "Luxury Class A Series™",
     description: "The A7 from our Luxury Class A Series™ combines elegance and performance with customizable jets and a sleek design for ultimate relaxation.",
-    image: "/compressed_rooftop_jpexchange.jpg",
+    image: "/A7_Top-Down.png",
     features: [
       "Advanced JetPak Therapy System",
       "Energy-efficient design with eco-friendly materials",
