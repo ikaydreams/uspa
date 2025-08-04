@@ -5,15 +5,16 @@ import { ChevronLeft, ChevronRight, Waves, Sparkles, Heart, Flower } from "lucid
 const SpaDevicesCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const devices = [
-    {
-      id: 1,
-      name: "M Series™ Spa",
-      description: "Ervaar ongeëvenaarde luxe met de M Series™, met veelzijdige opstellingen, 16 verwisselbare JetPak®-massages en intuïtieve bediening voor een elite spa-ervaring.",
-      features: ["Tot 16 JetPak®-massages", "Premium touchscreen bediening", "Simplicity® Filtratie", "CloudControl 2™ Wifi"],
-      icon: <Waves className="w-6 h-6" />,
-      image: "/M8.webp" 
-    {
+ const devices = [
+  {
+    id: 1,
+    name: "M Series™ Spa",
+    description: "Ervaar ongeëvenaarde luxe met de M Series™, met veelzijdige opstellingen, 16 verwisselbare JetPak®-massages en intuïtieve bediening voor een elite spa-ervaring.",
+    features: ["Tot 16 JetPak®-massages", "Premium touchscreen bediening", "Simplicity® Filtratie", "CloudControl 2™ Wifi"],
+    icon: <Waves className="w-6 h-6" />,
+    image: "/M8.webp" 
+  }, // <-- Added missing closing brace and comma
+  {
       id: 2,
       name: "A Series™ A9L",
       description: "De A9L biedt plaats aan 9 personen met 7 JetPak®-zetels en een luxe ligstoel, ideaal voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie.",
