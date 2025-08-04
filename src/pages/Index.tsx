@@ -15,9 +15,9 @@ const Index = () => {
       <HeroBanner />
       {/* Removed ServicesSection and FeaturedTreatmentsCarousel */}
       <section className="py-12">
-        <h2 className="text-2xl font-bold mb-4 text-center">Our Hot Tub Collection</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">Onze Jacuzzi Collectie</h2>
         <p className="text-base text-center max-w-xl mx-auto mb-8">
-          Explore our range of innovative spa devices designed for comfort and performance. Each model features customizable jets, energy-saving technology, and modern design to fit your lifestyle.
+         Ontdek ons assortiment innovatieve spa-apparaten, ontworpen voor comfort en prestaties. Elk model is uitgerust met aanpasbare jets, energiebesparende technologie en een modern ontwerp dat past bij uw levensstijl.
         </p>
       </section>
       <SpaLocationsCarousel />
