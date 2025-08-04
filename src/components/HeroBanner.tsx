@@ -2,38 +2,31 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-interface Slide {
-  id: number;
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-}
+const HeroBanner = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-const HeroBanner: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
-
-  const slides: Slide[] = [
+  // Updated slides with renamed image files (optional) and fallback
+  const slides = [
     {
       id: 1,
       title: "Welkom bij U-Spa",
-      subtitle: "Ontdek Luxe Spa Apparaten",
-      description: "Ervaar ultieme ontspanning met onze premium spa-apparaten, ontworpen voor luxe hydrotherapie en ongeëvenaard comfort.",
-      image: "/U-Spa-visual.jpg"
+      subtitle: "Ontdek Luxe en Welzijn",
+      description: "Ervaar de ultieme ontspanning in onze premium spa-faciliteiten",
+      image: "/U-Spa-visual.jpg" // Renamed to avoid spaces
     },
     {
       id: 2,
-      title: "Premium Spa Apparaten",
-      subtitle: "Jouw Welzijn, Onze Innovatie",
-      description: "Geniet van geavanceerde technologie met aanpasbare jets en intuïtieve bediening voor een gepersonaliseerde spa-ervaring.",
-      image: "/Girl.jpg"
+      title: "Premium Spa Ervaring",
+      subtitle: "Jouw Welzijn, Onze Passie",
+      description: "Geniet van onze exclusieve behandelingen en diensten",
+      image: "/Girl.jpg" // Renamed to avoid spaces
     },
     {
       id: 3,
       title: "Ontspan en Herlaad",
-      subtitle: "Een Oase van Comfort",
-      description: "Laat stress achter met onze spa-apparaten, die duurzame constructie combineren met efficiënte waterzuivering en sfeervolle verlichting.",
-      image: "/Woman.jpg"
+      subtitle: "Een Oase van Rust",
+      description: "Laat de dagelijkse stress achter en vind je innerlijke balans",
+      image: "/Woman.jpg" // Renamed to avoid spaces
     }
   ];
 
@@ -46,10 +39,11 @@ const HeroBanner: React.FC = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
     return () => clearInterval(timer);
   }, []);
 
+  // Log image paths for debugging
   useEffect(() => {
     slides.forEach((slide) => {
       console.log(`Attempting to load image: ${slide.image}`);
@@ -58,6 +52,7 @@ const HeroBanner: React.FC = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
+      {/* Slides */}
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -68,10 +63,14 @@ const HeroBanner: React.FC = () => {
           <div 
             className="w-full h-full bg-cover bg-center bg-no-repeat relative"
             style={{ 
-              backgroundImage: `url(${slide.image || "https://via.placeholder.com/1200x600"})`
+              backgroundImage: `url(${slide.image})`,
+              backgroundImage: `url(${slide.image || "https://via.placeholder.com/1200x600"})` // Fallback image
             }}
           >
+            {/* Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
+            
+            {/* Content */}
             <div className="relative z-10 h-full flex items-center justify-center">
               <div className="text-center text-white max-w-4xl px-4">
                 <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-4">
@@ -88,14 +87,14 @@ const HeroBanner: React.FC = () => {
                     size="lg" 
                     className="bg-foreground text-background hover:bg-foreground/90 font-figtree font-semibold"
                   >
-                    Ontdek Onze Spa Apparaten
+                    Ontdek Onze Spa's
                   </Button>
                   <Button 
                     variant="outline" 
                     size="lg"
                     className="border-2 border-white text-white hover:bg-white hover:text-black font-figtree font-semibold bg-transparent"
                   >
-                    Boek een Demo
+                    Boek Nu
                   </Button>
                 </div>
               </div>
@@ -104,6 +103,7 @@ const HeroBanner: React.FC = () => {
         </div>
       ))}
 
+      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors duration-200"
@@ -117,6 +117,7 @@ const HeroBanner: React.FC = () => {
         <ChevronRight size={24} />
       </button>
 
+      {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
         {slides.map((_, index) => (
           <button
