@@ -122,7 +122,7 @@ const SpaDevicesCarousel = () => {
             disabled={currentIndex >= maxIndex}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-card border border-border hover:bg-accent text-foreground p-3 rounded-full transition-all duration-200 shadow-soft disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <ChevronRight size=20} />
+            <ChevronRight size={20} />
           </button>
         </div>
       </div>
