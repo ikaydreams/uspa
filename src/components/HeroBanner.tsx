@@ -3,29 +3,37 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const HeroBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+interface Slide {
+  id: number;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+}
 
-  const slides = [
+const HeroBanner: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+
+  const slides: Slide[] = [
     {
       id: 1,
       title: "Welkom bij U-Spa",
       subtitle: "Ontdek Luxe Spa Apparaten",
-      description: "Ervaar ultieme ontspanning met onze premium M Series™ spa-apparaten, met 16 verwisselbare JetPak®-massages en geavanceerde technologie.",
+      description: "Ervaar ultieme ontspanning met onze premium spa-apparaten, ontworpen voor luxe hydrotherapie en ongeëvenaard comfort.",
       image: "/U-Spa-visual.jpg"
     },
     {
       id: 2,
-      title: "A Series™ A9L",
-      subtitle: "Luxe voor Grote Groepen",
-      description: "De A9L biedt 9 zitplaatsen, 7 JetPak®-zetels en een luxe ligstoel, perfect voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie.",
+      title: "Premium Spa Apparaten",
+      subtitle: "Jouw Welzijn, Onze Innovatie",
+      description: "Geniet van geavanceerde technologie met aanpasbare jets en intuïtieve bediening voor een gepersonaliseerde spa-ervaring.",
       image: "/Girl.jpg"
     },
     {
       id: 3,
-      title: "A Series™ A8L",
-      subtitle: "Veelzijdige Ontspanning",
-      description: "Geniet van 7 zitplaatsen met 6 JetPak®-opties en een premium ligstoel, ideaal voor koppels of gezinnen die variatie zoeken.",
+      title: "Ontspan en Herlaad",
+      subtitle: "Een Oase van Comfort",
+      description: "Laat stress achter met onze spa-apparaten, die duurzame constructie combineren met efficiënte waterzuivering en sfeervolle verlichting.",
       image: "/Woman.jpg"
     }
   ];
@@ -51,7 +59,6 @@ const HeroBanner = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Slides */}
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -62,14 +69,10 @@ const HeroBanner = () => {
           <div 
             className="w-full h-full bg-cover bg-center bg-no-repeat relative"
             style={{ 
-              backgroundImage: `url(${slide.image})`,
               backgroundImage: `url(${slide.image || "https://via.placeholder.com/1200x600"})`
             }}
           >
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
-            
-            {/* Content */}
             <div className="relative z-10 h-full flex items-center justify-center">
               <div className="text-center text-white max-w-4xl px-4">
                 <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-4">
@@ -102,7 +105,6 @@ const HeroBanner = () => {
         </div>
       ))}
 
-      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors duration-200"
@@ -116,7 +118,6 @@ const HeroBanner = () => {
         <ChevronRight size={24} />
       </button>
 
-      {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
         {slides.map((_, index) => (
           <button
