@@ -17,43 +17,22 @@ interface NavItem {
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  // Updated hotTubSeries with product layouts for each series
   const hotTubSeries = [
     {
       name: "Elite Class M Series™",
       href: "/series/m-series",
-      products: [
-        { name: "M9 Hot Tub", href: "/series/m-series#m9" },
-        { name: "M8 Hot Tub", href: "/series/m-series#m8" },
-        { name: "M7 Hot Tub", href: "/series/m-series#m7" },
-      ],
     },
     {
       name: "Luxury Class A Series™",
       href: "/series/a-series",
-      products: [
-        { name: "A9L Hot Tub", href: "/series/a-series#a9l" },
-        { name: "A8 Hot Tub", href: "/series/a-series#a8" },
-        { name: "A7 Hot Tub", href: "/series/a-series#a7" },
-      ],
     },
     {
       name: "Comfort Class X Series™",
       href: "/series/x-series",
-      products: [
-        { name: "X8 Hot Tub", href: "/series/x-series#x8" },
-        { name: "X7 Hot Tub", href: "/series/x-series#x7" },
-        { name: "X6 Hot Tub", href: "/series/x-series#x6" },
-      ],
     },
     {
       name: "Performance Class Swim Series™",
       href: "/series/swim-series",
-      products: [
-        { name: "S200 Swim Spa", href: "/series/swim-series#s200" },
-        { name: "S150 Swim Spa", href: "/series/swim-series#s150" },
-        { name: "S100 Swim Spa", href: "/series/swim-series#s100" },
-      ],
     },
   ];
 
@@ -90,29 +69,19 @@ const Header: React.FC = () => {
               >
                 Home
               </Link>
-              {/* Hot Tubs Dropdown */}
+              {/* Spa's Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200">
                   Spa's
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-card border-border z-50 min-w-[260px]">
+                <DropdownMenuContent className="bg-card border-border z-50 min-w-[220px]">
                   {hotTubSeries.map((series) => (
-                    <div key={series.name}>
-                      <DropdownMenuItem asChild>
-                        <Link to={series.href} className="font-semibold w-full text-card-foreground">
-                          {series.name}
-                        </Link>
-                      </DropdownMenuItem>
-                      {series.products.map((product) => (
-                        <DropdownMenuItem key={product.name} asChild>
-                          <Link to={product.href} className="pl-4 w-full text-card-foreground text-sm">
-                            {product.name}
-                          </Link>
-                        </DropdownMenuItem>
-                      ))}
-                      <div className="border-b border-border my-1" />
-                    </div>
+                    <DropdownMenuItem key={series.name} asChild>
+                      <Link to={series.href} className="w-full text-card-foreground">
+                        {series.name}
+                      </Link>
+                    </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -157,25 +126,14 @@ const Header: React.FC = () => {
               <div className="px-3 py-2">
                 <p className="font-figtree text-foreground font-semibold mb-2">Spa's</p>
                 {hotTubSeries.map((series) => (
-                  <div key={series.name} className="mb-2">
-                    <Link
-                      to={series.href}
-                      className="block font-semibold text-card-foreground hover:text-primary transition-colors duration-200"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {series.name}
-                    </Link>
-                    {series.products.map((product) => (
-                      <Link
-                        key={product.name}
-                        to={product.href}
-                        className="block pl-4 text-muted-foreground hover:text-foreground text-sm transition-colors duration-200"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {product.name}
-                      </Link>
-                    ))}
-                  </div>
+                  <Link
+                    key={series.name}
+                    to={series.href}
+                    className="block text-card-foreground hover:text-primary transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {series.name}
+                  </Link>
                 ))}
               </div>
               {navigation
