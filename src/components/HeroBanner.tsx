@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -5,28 +6,27 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Updated slides with renamed image files (optional) and fallback
   const slides = [
     {
       id: 1,
       title: "Welkom bij U-Spa",
-      subtitle: "Ontdek Luxe en Welzijn",
-      description: "Ervaar de ultieme ontspanning in onze premium spa-faciliteiten",
-      image: "/U-Spa-visual.jpg" // Renamed to avoid spaces
+      subtitle: "Ontdek Luxe Spa Apparaten",
+      description: "Ervaar ultieme ontspanning met onze premium M Series™ spa-apparaten, met 16 verwisselbare JetPak®-massages en geavanceerde technologie.",
+      image: "/U-Spa-visual.jpg"
     },
     {
       id: 2,
-      title: "Premium Spa Ervaring",
-      subtitle: "Jouw Welzijn, Onze Passie",
-      description: "Geniet van onze exclusieve behandelingen en diensten",
-      image: "/Girl.jpg" // Renamed to avoid spaces
+      title: "A Series™ A9L",
+      subtitle: "Luxe voor Grote Groepen",
+      description: "De A9L biedt 9 zitplaatsen, 7 JetPak®-zetels en een luxe ligstoel, perfect voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie.",
+      image: "/Girl.jpg"
     },
     {
       id: 3,
-      title: "Ontspan en Herlaad",
-      subtitle: "Een Oase van Rust",
-      description: "Laat de dagelijkse stress achter en vind je innerlijke balans",
-      image: "/Woman.jpg" // Renamed to avoid spaces
+      title: "A Series™ A8L",
+      subtitle: "Veelzijdige Ontspanning",
+      description: "Geniet van 7 zitplaatsen met 6 JetPak®-opties en een premium ligstoel, ideaal voor koppels of gezinnen die variatie zoeken.",
+      image: "/Woman.jpg"
     }
   ];
 
@@ -39,11 +39,10 @@ const HeroBanner = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+    const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, []);
 
-  // Log image paths for debugging
   useEffect(() => {
     slides.forEach((slide) => {
       console.log(`Attempting to load image: ${slide.image}`);
@@ -64,7 +63,7 @@ const HeroBanner = () => {
             className="w-full h-full bg-cover bg-center bg-no-repeat relative"
             style={{ 
               backgroundImage: `url(${slide.image})`,
-              backgroundImage: `url(${slide.image || "https://via.placeholder.com/1200x600"})` // Fallback image
+              backgroundImage: `url(${slide.image || "https://via.placeholder.com/1200x600"})`
             }}
           >
             {/* Overlay */}
@@ -87,14 +86,14 @@ const HeroBanner = () => {
                     size="lg" 
                     className="bg-foreground text-background hover:bg-foreground/90 font-figtree font-semibold"
                   >
-                    Ontdek Onze Spa's
+                    Ontdek Onze Spa Apparaten
                   </Button>
                   <Button 
                     variant="outline" 
                     size="lg"
                     className="border-2 border-white text-white hover:bg-white hover:text-black font-figtree font-semibold bg-transparent"
                   >
-                    Boek Nu
+                    Boek een Demo
                   </Button>
                 </div>
               </div>
