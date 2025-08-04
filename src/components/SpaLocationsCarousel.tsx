@@ -36,7 +36,7 @@ const SpaDevicesCarousel = () => {
       description: "De X Series™ combineert betaalbare luxe met duurzame EnduraFrame™-constructie, efficiënte waterfiltratie en aanpasbare LED-verlichting.",
       features: ["EnduraFrame™ constructie", "Efficiënte filtratie", "LED-verlichting", "Betaalbare luxe"],
       icon: <Flower className="w-6 h-6" />,
-      image: "https://www.bullfrogspas.com/wp-content/uploads/2024/05/X-Series-Placeholder.png" // Placeholder: specific X Series™ image not provided
+      image: "/X8_Select_Snow_Top.webp" 
     }
   ];
 
