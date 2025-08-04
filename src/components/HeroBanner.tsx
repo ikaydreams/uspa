@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Updated slides to focus on spa devices
+ 
   const slides = [
     {
       id: 1,
