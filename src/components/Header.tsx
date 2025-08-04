@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -26,12 +26,11 @@ const Header: React.FC = () => {
 
   const navigation: NavItem[] = [
     { name: "Home", href: "/" },
+    // "Spa's" will be handled as a dropdown right after Home
     { name: "Stores", href: "/stores" },
     { name: "Our Difference", href: "/difference" },
     { name: "Company", href: "/company" },
     { name: "Community", href: "/community" },
-    { name: "Product Lines", href: "/products" },
-    { name: "Series", href: "/series" },
   ];
 
   return (
@@ -51,16 +50,13 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200"
-                >
-                  {item.name}
-                </Link>
-              ))}
-              
+              <Link
+                key="Home"
+                to="/"
+                className="font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200"
+              >
+                Home
+              </Link>
               {/* Hot Tubs Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200">
@@ -77,6 +73,17 @@ const Header: React.FC = () => {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
+              {navigation
+                .filter((item) => item.name !== "Home")
+                .map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
             </div>
           </div>
 
@@ -96,18 +103,16 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="block px-3 py-2 font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              <Link
+                key="Home"
+                to="/"
+                className="block px-3 py-2 font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
               <div className="px-3 py-2">
-                <p className="font-figtree text-foreground font-semibold mb-2">Hot Tubs</p>
+                <p className="font-figtree text-foreground font-semibold mb-2">Spa's</p>
                 {hotTubSeries.map((series) => (
                   <Link
                     key={series.name}
@@ -119,6 +124,18 @@ const Header: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {navigation
+                .filter((item) => item.name !== "Home")
+                .map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="block px-3 py-2 font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
             </div>
           </div>
         )}
