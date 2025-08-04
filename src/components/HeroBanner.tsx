@@ -5,28 +5,28 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Updated slides with renamed image files (optional) and fallback
+  // Updated slides to focus on spa devices
   const slides = [
     {
       id: 1,
-      title: "Welkom bij U-Spa",
-      subtitle: "Ontdek Luxe en Welzijn",
-      description: "Ervaar de ultieme ontspanning in onze premium spa-faciliteiten",
-      image: "/U-Spa-visual.jpg" // Renamed to avoid spaces
+      title: "Premium Spa-apparaten",
+      subtitle: "Professionele Kwaliteit voor Thuis",
+      description: "Ontdek onze innovatieve wellness-technologie voor een luxe spa-ervaring in uw eigen huis",
+      image: "/U-Spa-visual.jpg"
     },
     {
       id: 2,
-      title: "Premium Spa Ervaring",
-      subtitle: "Jouw Welzijn, Onze Passie",
-      description: "Geniet van onze exclusieve behandelingen en diensten",
-      image: "/Girl.jpg" // Renamed to avoid spaces
+      title: "Revolutionaire Wellness Tech",
+      subtitle: "Geavanceerde Technologie voor Thuisgebruik",
+      description: "Ervaar professionele resultaten met onze klinisch geteste apparatuur",
+      image: "/Girl.jpg"
     },
     {
       id: 3,
-      title: "Ontspan en Herlaad",
-      subtitle: "Een Oase van Rust",
-      description: "Laat de dagelijkse stress achter en vind je innerlijke balans",
-      image: "/Woman.jpg" // Renamed to avoid spaces
+      title: "Spa Technologie Heruitgevonden",
+      subtitle: "Medisch Grade Apparatuur voor Particulieren",
+      description: "Transformeer elke ruimte tot een persoonlijk wellness-centrum met onze apparaten",
+      image: "/Woman.jpg"
     }
   ];
 
@@ -39,15 +39,8 @@ const HeroBanner = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+    const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
-  }, []);
-
-  // Log image paths for debugging
-  useEffect(() => {
-    slides.forEach((slide) => {
-      console.log(`Attempting to load image: ${slide.image}`);
-    });
   }, []);
 
   return (
@@ -63,8 +56,7 @@ const HeroBanner = () => {
           <div 
             className="w-full h-full bg-cover bg-center bg-no-repeat relative"
             style={{ 
-              backgroundImage: `url(${slide.image})`,
-              backgroundImage: `url(${slide.image || "https://via.placeholder.com/1200x600"})` // Fallback image
+              backgroundImage: `url(${slide.image || "https://via.placeholder.com/1200x600"})`
             }}
           >
             {/* Overlay */}
@@ -87,14 +79,14 @@ const HeroBanner = () => {
                     size="lg" 
                     className="bg-foreground text-background hover:bg-foreground/90 font-figtree font-semibold"
                   >
-                    Ontdek Onze Spa's
+                    Ontdek Onze Producten
                   </Button>
                   <Button 
                     variant="outline" 
                     size="lg"
                     className="border-2 border-white text-white hover:bg-white hover:text-black font-figtree font-semibold bg-transparent"
                   >
-                    Boek Nu
+                    Bestel Nu
                   </Button>
                 </div>
               </div>
