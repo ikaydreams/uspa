@@ -20,7 +20,7 @@ const SpaDevicesCarousel = () => {
       description: "De A9L biedt plaats aan 9 personen met 7 JetPak®-zetels en een luxe ligstoel, ideaal voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie.",
       features: ["9 zitplaatsen", "7 JetPak®-zetels", "Simplicity® Filtratie", "Premium waterval"],
       icon: <Sparkles className="w-6 h-6" />,
-      image: "https://www.bullfrogspas.com/wp-content/uploads/2024/05/A9L-Top-Down.png" // Sourced from A9L page
+      image: "/A9L_Top-Down.webp" 
     },
     {
       id: 3,
