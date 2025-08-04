@@ -133,7 +133,7 @@ const xSeriesProducts: Product[] = [
     name: "X8 Hot Tub",
     series: "Comfort Class X Series™",
     description: "The X8 is designed for comfort and value, with plenty of space and reliable performance.",
-    image: "/images/xseries/x8.jpg",
+    image: "/X8_Select_Snow_Top.webp",
     features: [
       "Spacious seating for up to 8 adults",
       "Powerful hydrotherapy jets",
@@ -151,7 +151,7 @@ const xSeriesProducts: Product[] = [
     name: "X7 Hot Tub",
     series: "Comfort Class X Series™",
     description: "The X7 offers a balance of space and features, perfect for families and entertaining.",
-    image: "/images/xseries/x7.jpg",
+    image: "/X7_Select_Snow_Top.webp",
     features: [
       "Comfortable seating for up to 7 adults",
       "Effective hydrotherapy jets",
@@ -169,7 +169,7 @@ const xSeriesProducts: Product[] = [
     name: "X6 Hot Tub",
     series: "Comfort Class X Series™",
     description: "The X6 from our Comfort Class X Series™ offers affordable comfort with durable construction and powerful hydrotherapy jets.",
-    image: "/compressed_Swim-Series_Timber-Snow_Lifestyle_AC5I8872.jpg",
+    image: "/X8L_Select_Snow_Top.webp",
     features: [
       "High-performance jets for effective hydrotherapy",
       "Durable construction for long-lasting use",
@@ -191,7 +191,7 @@ const swimSeriesProducts: Product[] = [
     name: "S200 Swim Spa",
     series: "Performance Class Swim Series™",
     description: "The S200 is a spacious swim spa for fitness and relaxation.",
-    image: "/images/swimseries/s200.jpg",
+    image: "/S200-Standard-SwimDek.webp",
     features: [
       "Powerful swim jets",
       "Spacious swim area",
@@ -210,7 +210,7 @@ const swimSeriesProducts: Product[] = [
     series: "Performance Class Swim Series™",
     description:
       "The S150 from our Performance Class Swim Series™ is designed for fitness and relaxation, offering a spacious swim area and powerful swim jets.",
-    image: "/compressed_S2006728.jpg",
+    image: "/S150-Standard-SwimDek.webp",
     features: [
       "Powerful swim jets for resistance training",
       "Spacious swim area for family fun",
@@ -228,7 +228,7 @@ const swimSeriesProducts: Product[] = [
     name: "S100 Swim Spa",
     series: "Performance Class Swim Series™",
     description: "The S100 is an entry-level swim spa that doesn't compromise on quality or features.",
-    image: "/images/swimseries/s100.jpg",
+    image: "/S180XD-Standard-SwimDek.webp",
     features: [
       "Reliable swim jets for steady water current",
       "Compact design for smaller spaces",
