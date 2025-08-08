@@ -37,7 +37,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
             <img
-              src="/lovable-Uploads/2629847b-6255-416f-853b-864c3cc3b629.png"
+              src="/U-Spa Flavicon.jpg"
               alt="U-Spa Logo"
               className="h-10 w-10 mr-3"
             />
