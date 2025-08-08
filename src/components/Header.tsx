@@ -22,7 +22,7 @@ const Header: React.FC = () => {
     { name: "Luxury Class A Series™", href: "/series/a-series" },
     { name: "Comfort Class X Series™", href: "/series/x-series" },
     { name: "Performance Class Swim Series™", href: "/series/swim-series" },
-    { name: "Stil Modern Class", href: "/series/stil-series" },
+    { name: "Stil Modern Class™", href: "/series/stil-series" },
   ];
 
   const navigation: NavItem[] = [
