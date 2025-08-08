@@ -5,10 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Index from "./pages/Index";
-import Stores from "./pages/Stores";
 import Company from "./pages/Company";
 import OurDifference from "./pages/OurDifference";
-import Community from "./pages/Community";
 import ProductLines from "./pages/ProductLines";
 import Series from "./pages/Series";
 import ProductDetail from "./pages/ProductDetail";
@@ -25,10 +23,8 @@ const App: React.FC = () => (
         <Header />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/stores" element={<Stores />} />
           <Route path="/company" element={<Company />} />
           <Route path="/difference" element={<OurDifference />} />
-          <Route path="/community" element={<Community />} />
           <Route path="/products" element={<ProductLines />} />
           <Route path="/series" element={<Series />} />
           <Route path="/series/:seriesId" element={<ProductDetail />} />
