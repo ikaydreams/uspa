@@ -1,28 +1,33 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Waves, Sparkles, Heart, Flower } from "lucide-react";
+import { Waves, Sparkles, Heart, Flower, Droplet } from "lucide-react";
 
 const ServicesSection = () => {
   const devices = [
     {
       icon: <Waves className="w-12 h-12" />,
       title: "M Series™ Spa",
-      description: "Ervaar ongeëvenaarde luxe met de M Series™, met veelzijdige opstellingen, 16 verwisselbare JetPak®-massages en intuïtieve bediening voor een elite spa-ervaring."
+      description: "Ervaar ongeëvenaarde luxe met de M Series™, met veelzijdige opstellingen, 16 verwisselbare JetPak®-massages en intuïtieve bediening voor een elite spa-ervaring.",
     },
     {
       icon: <Sparkles className="w-12 h-12" />,
       title: "A Series™ A9L",
-      description: "De A9L biedt plaats aan 9 personen met 7 JetPak®-zetels en een luxe ligstoel, ideaal voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie."
+      description: "De A9L biedt plaats aan 9 personen met 7 JetPak®-zetels en een luxe ligstoel, ideaal voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie.",
     },
     {
       icon: <Heart className="w-12 h-12" />,
       title: "A Series™ A8L",
-      description: "De A8L biedt 7 zitplaatsen, waaronder een premium ligstoel en 6 JetPak®-opties, perfect voor koppels of gezinnen die variatie zoeken in ontspanning."
+      description: "De A8L biedt 7 zitplaatsen, waaronder een premium ligstoel en 6 JetPak®-opties, perfect voor koppels of gezinnen die variatie zoeken in ontspanning.",
     },
     {
       icon: <Flower className="w-12 h-12" />,
       title: "X Series™ Spa",
-      description: "De X Series™ combineert betaalbare luxe met duurzame EnduraFrame™-constructie, efficiënte waterfiltratie en aanpasbare LED-verlichting."
-    }
+      description: "De X Series™ combineert betaalbare luxe met duurzame EnduraFrame™-constructie, efficiënte waterfiltratie en aanpasbare LED-verlichting.",
+    },
+    {
+      icon: <Droplet className="w-12 h-12" />,
+      title: "STIL 7™ Spa",
+      description: "De STIL 7 combineert strak design met geavanceerde JetPak®-technologie voor een moderne spa-ervaring.",
+    },
   ];
 
   return (
@@ -33,7 +38,7 @@ const ServicesSection = () => {
             Onze Spa Apparaten
           </h2>
           <p className="text-lg font-figtree text-muted-foreground max-w-2xl mx-auto">
-            Ontdek ons assortiment innovatieve spa-apparaten van Bullfrog Spas, ontworpen 
+            Ontdek ons assortiment innovatieve spa-apparaten van Bullfrog Spas, ontworpen
             voor luxe, comfort en personalisatie, met geavanceerde technologie zoals het JetPak Therapy System®.
           </p>
         </div>
