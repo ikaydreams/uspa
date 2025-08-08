@@ -11,7 +11,7 @@ const SpaDevicesCarousel = () => {
       name: "M Series™ Spa",
       description: "Ervaar ongeëvenaarde luxe met de M Series™, met veelzijdige opstellingen, 16 verwisselbare JetPak®-massages en intuïtieve bediening voor een elite spa-ervaring.",
       features: ["Tot 16 JetPak®-massages", "Premium touchscreen bediening", "Simplicity® Filtratie", "CloudControl 2™ Wifi"],
-      icon: <Waves className="w-6 h-6" />,
+      
       image: "/M8.webp"
     },
     {
@@ -19,7 +19,7 @@ const SpaDevicesCarousel = () => {
       name: "A Series™ A9L",
       description: "De A9L biedt plaats aan 9 personen met 7 JetPak®-zetels en een luxe ligstoel, ideaal voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie.",
       features: ["9 zitplaatsen", "7 JetPak®-zetels", "Simplicity® Filtratie", "Premium waterval"],
-      icon: <Sparkles className="w-6 h-6" />,
+     
       image: "/A9L_Top-Down.webp"
     },
     {
@@ -27,7 +27,7 @@ const SpaDevicesCarousel = () => {
       name: "STIL 6 Hot Tub",
       description: "De STIL 6 combineert strakke lijnen met geavanceerde hydrotherapie voor een compacte, luxe spa-ervaring.",
       features: ["JetPak Therapy System", "Compact modern design", "Energiezuinige technologie", "LED-verlichting"],
-      icon: <Heart className="w-6 h-6" />, // Added icon for consistency
+     
       image: "/STIL-7_top-down.webp"
     },
     {
@@ -35,7 +35,7 @@ const SpaDevicesCarousel = () => {
       name: "A Series™ A8L",
       description: "De A8L biedt 7 zitplaatsen, waaronder een premium ligstoel en 6 JetPak®-opties, perfect voor koppels of gezinnen die variatie zoeken in ontspanning.",
       features: ["7 zitplaatsen", "6 JetPak®-zetels", "Touchscreen bediening", "LED-verlichting"],
-      icon: <Heart className="w-6 h-6" />,
+      
       image: "https://www.bullfrogspas.com/wp-content/uploads/2024/05/A8_Top-Down.png"
     },
     {
@@ -43,7 +43,7 @@ const SpaDevicesCarousel = () => {
       name: "X Series™ Spa",
       description: "De X Series™ combineert betaalbare luxe met duurzame EnduraFrame™-constructie, efficiënte waterfiltratie en aanpasbare LED-verlichting.",
       features: ["EnduraFrame™ constructie", "Efficiënte filtratie", "LED-verlichting", "Betaalbare luxe"],
-      icon: <Flower className="w-6 h-6" />,
+      
       image: "/X8_Select_Snow_Top.webp"
     }
   ];
