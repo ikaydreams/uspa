@@ -244,7 +244,7 @@ const stilSeriesProducts: Product[] = [
     name: "STIL 7 Hot Tub",
     series: "Stil Modern Class",
     description: "De STIL 7 biedt een minimalistisch design met premium hydrotherapie, ideaal voor moderne ruimtes.",
-    image: "/STIL7.webp",
+    image: "/STIL-7_top-down.webp",
     features: [
       "JetPak Therapy System",
       "Minimalistisch design",
@@ -262,7 +262,7 @@ const stilSeriesProducts: Product[] = [
     name: "STIL 6 Hot Tub",
     series: "Stil Modern Class",
     description: "De STIL 6 combineert strakke lijnen met geavanceerde hydrotherapie voor een compacte, luxe spa-ervaring.",
-    image: "/STIL6.webp",
+    image: "/STIL-7_top-down.webp",
     features: [
       "JetPak Therapy System",
       "Compact modern design",
@@ -280,7 +280,7 @@ const stilSeriesProducts: Product[] = [
     name: "STIL 5 Hot Tub",
     series: "Stil Modern Class",
     description: "De STIL 5 is een compacte spa met premium functies, perfect voor kleinere ruimtes.",
-    image: "/STIL5.webp",
+    image: "/STIL-5_top-down.webp",
     features: [
       "JetPak Therapy System",
       "Minimalistisch en compact",
