@@ -69,17 +69,17 @@ const HeroBanner = () => {
                 <p className="text-lg md:text-xl font-figtree mb-8 max-w-2xl mx-auto">
                   {slide.description}
                 </p>
-                <div className="space-x-2 sm:space-x-4 md:space-x-6 flex justify-center">
+                <div className="flex flex-col items-center space-y-4">
                   <Button
                     size="lg"
-                    className="bg-foreground text-background hover:bg-foreground/90 font-figtree font-semibold"
+                    className="bg-foreground text-background hover:bg-foreground/90 font-figtree font-semibold w-full max-w-xs"
                   >
                     Ontdek Onze Producten
                   </Button>
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-2 border-white text-white hover:bg-white hover:text-black font-figtree font-semibold bg-transparent"
+                    className="border-2 border-white text-white hover:bg-white hover:text-black font-figtree font-semibold bg-transparent w-full max-w-xs"
                   >
                     Neem Contact Op
                   </Button>
