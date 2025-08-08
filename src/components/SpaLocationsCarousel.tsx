@@ -13,7 +13,7 @@ const SpaDevicesCarousel = () => {
       description: "Ervaar ongeëvenaarde luxe met de M Series™, met veelzijdige opstellingen, 16 verwisselbare JetPak®-massages en intuïtieve bediening voor een elite spa-ervaring.",
       features: ["Tot 16 JetPak®-massages", "Premium touchscreen bediening", "Simplicity® Filtratie", "CloudControl 2™ Wifi"],
       image: "/M8.webp",
-      link: "https://uspa-two.vercel.app/series/m-series" // Full URL
+      link: "/series/m-series" // Relative path
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const SpaDevicesCarousel = () => {
       description: "De A9L biedt plaats aan 9 personen met 7 JetPak®-zetels en een luxe ligstoel, ideaal voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie.",
       features: ["9 zitplaatsen", "7 JetPak®-zetels", "Simplicity® Filtratie", "Premium waterval"],
       image: "/A9L_Top-Down.webp",
-      link: "https://uspa-two.vercel.app/series/a-series" // Full URL
+      link: "/series/a-series" // Relative path
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const SpaDevicesCarousel = () => {
       description: "De STIL 6 combineert strakke lijnen met geavanceerde hydrotherapie voor een compacte, luxe spa-ervaring.",
       features: ["JetPak Therapy System", "Compact modern design", "Energiezuinige technologie", "LED-verlichting"],
       image: "/STIL-7_top-down.webp",
-      link: "https://uspa-two.vercel.app/series/stil-series" // Full URL
+      link: "/series/stil-series" // Relative path
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ const SpaDevicesCarousel = () => {
       description: "De A8L biedt 7 zitplaatsen, inclusief een premium ligstoel en 6 JetPak®-opties, perfect voor koppels of gezinnen die variatie zoeken in ontspanning.",
       features: ["7 zitplaatsen", "6 JetPak®-zetels", "Touchscreen bediening", "LED-verlichting"],
       image: "https://www.bullfrogspas.com/wp-content/uploads/2024/05/A8_Top-Down.png",
-      link: "https://uspa-two.vercel.app/series/a-series" // Full URL
+      link: "/series/a-series" // Relative path
     },
     {
       id: 5,
@@ -45,7 +45,7 @@ const SpaDevicesCarousel = () => {
       description: "De X Series™ combineert betaalbare luxe met duurzame EnduraFrame™-constructie, efficiënte waterfiltratie en aanpasbare LED-verlichting.",
       features: ["EnduraFrame™ constructie", "Efficiënte filtratie", "LED-verlichting", "Betaalbare luxe"],
       image: "/X8_Select_Snow_Top.webp",
-      link: "https://uspa-two.vercel.app/series/x-series" // Full URL
+      link: "/series/x-series" // Relative path
     }
   ];
 
