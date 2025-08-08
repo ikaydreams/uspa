@@ -5,38 +5,46 @@ import { ChevronLeft, ChevronRight, Waves, Sparkles, Heart, Flower } from "lucid
 const SpaDevicesCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
- const devices = [
-  {
-    id: 1,
-    name: "M Series™ Spa",
-    description: "Ervaar ongeëvenaarde luxe met de M Series™, met veelzijdige opstellingen, 16 verwisselbare JetPak®-massages en intuïtieve bediening voor een elite spa-ervaring.",
-    features: ["Tot 16 JetPak®-massages", "Premium touchscreen bediening", "Simplicity® Filtratie", "CloudControl 2™ Wifi"],
-    icon: <Waves className="w-6 h-6" />,
-    image: "/M8.webp" 
-  }, // <-- Added missing closing brace and comma
-  {
+  const devices = [
+    {
+      id: 1,
+      name: "M Series™ Spa",
+      description: "Ervaar ongeëvenaarde luxe met de M Series™, met veelzijdige opstellingen, 16 verwisselbare JetPak®-massages en intuïtieve bediening voor een elite spa-ervaring.",
+      features: ["Tot 16 JetPak®-massages", "Premium touchscreen bediening", "Simplicity® Filtratie", "CloudControl 2™ Wifi"],
+      icon: <Waves className="w-6 h-6" />,
+      image: "/M8.webp"
+    },
+    {
       id: 2,
       name: "A Series™ A9L",
       description: "De A9L biedt plaats aan 9 personen met 7 JetPak®-zetels en een luxe ligstoel, ideaal voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie.",
       features: ["9 zitplaatsen", "7 JetPak®-zetels", "Simplicity® Filtratie", "Premium waterval"],
       icon: <Sparkles className="w-6 h-6" />,
-      image: "/A9L_Top-Down.webp" 
+      image: "/A9L_Top-Down.webp"
     },
     {
       id: 3,
+      name: "STIL 6 Hot Tub",
+      description: "De STIL 6 combineert strakke lijnen met geavanceerde hydrotherapie voor een compacte, luxe spa-ervaring.",
+      features: ["JetPak Therapy System", "Compact modern design", "Energiezuinige technologie", "LED-verlichting"],
+      icon: <Heart className="w-6 h-6" />, // Added icon for consistency
+      image: "/STIL-7_top-down.webp"
+    },
+    {
+      id: 4,
       name: "A Series™ A8L",
       description: "De A8L biedt 7 zitplaatsen, waaronder een premium ligstoel en 6 JetPak®-opties, perfect voor koppels of gezinnen die variatie zoeken in ontspanning.",
       features: ["7 zitplaatsen", "6 JetPak®-zetels", "Touchscreen bediening", "LED-verlichting"],
       icon: <Heart className="w-6 h-6" />,
-      image: "https://www.bullfrogspas.com/wp-content/uploads/2024/05/A8_Top-Down.png" // Sourced from provided A8L URL
+      image: "https://www.bullfrogspas.com/wp-content/uploads/2024/05/A8_Top-Down.png"
     },
     {
-      id: 4,
+      id: 5,
       name: "X Series™ Spa",
       description: "De X Series™ combineert betaalbare luxe met duurzame EnduraFrame™-constructie, efficiënte waterfiltratie en aanpasbare LED-verlichting.",
       features: ["EnduraFrame™ constructie", "Efficiënte filtratie", "LED-verlichting", "Betaalbare luxe"],
       icon: <Flower className="w-6 h-6" />,
-      image: "/X8_Select_Snow_Top.webp" 
+      image: "/X8_Select_Snow_Top.webp"
     }
   ];
 
@@ -67,7 +75,7 @@ const SpaDevicesCarousel = () => {
         <div className="relative">
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-300 ease-in-out gap-6"
+              className="flex transition-transform duration-300 ease-in-out gap-4 md:gap-6"
               style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
             >
               {devices.map((device) => (
@@ -82,13 +90,15 @@ const SpaDevicesCarousel = () => {
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-poppins font-bold mb-3">
-                        {device.name}
-                      </h3>
+                      <div className="flex items-center gap-2 mb-3">
+                        {device.icon}
+                        <h3 className="text-xl font-poppins font-bold">
+                          {device.name}
+                        </h3>
+                      </div>
                       <p className="font-figtree text-muted-foreground mb-4 text-sm leading-relaxed">
                         {device.description}
                       </p>
-                      
                       <div className="border-t border-border pt-4">
                         <p className="text-sm font-semibold mb-2">Kenmerken:</p>
                         <div className="flex flex-wrap gap-1">
@@ -113,6 +123,7 @@ const SpaDevicesCarousel = () => {
           <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
+            aria-label="Vorige spa apparaten"
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-card border border-border hover:bg-accent text-foreground p-3 rounded-full transition-all duration-200 shadow-soft disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <ChevronLeft size={20} />
@@ -120,6 +131,7 @@ const SpaDevicesCarousel = () => {
           <button
             onClick={nextSlide}
             disabled={currentIndex >= maxIndex}
+            aria-label="Volgende spa apparaten"
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-card border border-border hover:bg-accent text-foreground p-3 rounded-full transition-all duration-200 shadow-soft disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <ChevronRight size={20} />
