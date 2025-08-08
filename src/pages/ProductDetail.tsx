@@ -11,7 +11,6 @@ interface Product {
   specs: { [key: string]: string };
 }
 
-// M Series (already done)
 const mSeriesProducts: Product[] = [
   {
     name: "M9 Hot Tub",
@@ -69,7 +68,6 @@ const mSeriesProducts: Product[] = [
   },
 ];
 
-// A Series
 const aSeriesProducts: Product[] = [
   {
     name: "A9L Hot Tub",
@@ -127,7 +125,6 @@ const aSeriesProducts: Product[] = [
   },
 ];
 
-// X Series
 const xSeriesProducts: Product[] = [
   {
     name: "X8 Hot Tub",
@@ -185,7 +182,6 @@ const xSeriesProducts: Product[] = [
   },
 ];
 
-// Swim Series
 const swimSeriesProducts: Product[] = [
   {
     name: "S200 Swim Spa",
@@ -208,8 +204,7 @@ const swimSeriesProducts: Product[] = [
   {
     name: "S150 Swim Spa",
     series: "Performance Class Swim Series™",
-    description:
-      "The S150 from our Performance Class Swim Series™ is designed for fitness and relaxation, offering a spacious swim area and powerful swim jets.",
+    description: "The S150 from our Performance Class Swim Series™ is designed for fitness and relaxation, offering a spacious swim area and powerful swim jets.",
     image: "/S150-Standard-SwimDek.webp",
     features: [
       "Powerful swim jets for resistance training",
@@ -244,6 +239,63 @@ const swimSeriesProducts: Product[] = [
   },
 ];
 
+const stilSeriesProducts: Product[] = [
+  {
+    name: "STIL 7 Hot Tub",
+    series: "Stil Modern Class",
+    description: "De STIL 7 biedt een minimalistisch design met premium hydrotherapie, ideaal voor moderne ruimtes.",
+    image: "/STIL7.webp",
+    features: [
+      "JetPak Therapy System",
+      "Minimalistisch design",
+      "Efficiënte verwarming",
+      "LED-verlichting",
+    ],
+    specs: {
+      dimensions: "7'0\" x 7'0\" x 31\"",
+      capacity: "5-6 adults",
+      waterCapacity: "300 gallons",
+      weight: "600 lbs (dry)",
+    },
+  },
+  {
+    name: "STIL 6 Hot Tub",
+    series: "Stil Modern Class",
+    description: "De STIL 6 combineert strakke lijnen met geavanceerde hydrotherapie voor een compacte, luxe spa-ervaring.",
+    image: "/STIL6.webp",
+    features: [
+      "JetPak Therapy System",
+      "Compact modern design",
+      "Energiezuinige technologie",
+      "LED-verlichting",
+    ],
+    specs: {
+      dimensions: "6'8\" x 6'8\" x 31\"",
+      capacity: "4-5 adults",
+      waterCapacity: "280 gallons",
+      weight: "550 lbs (dry)",
+    },
+  },
+  {
+    name: "STIL 5 Hot Tub",
+    series: "Stil Modern Class",
+    description: "De STIL 5 is een compacte spa met premium functies, perfect voor kleinere ruimtes.",
+    image: "/STIL5.webp",
+    features: [
+      "JetPak Therapy System",
+      "Minimalistisch en compact",
+      "Efficiënte filtratie",
+      "LED-verlichting",
+    ],
+    specs: {
+      dimensions: "6'5\" x 6'5\" x 31\"",
+      capacity: "3-4 adults",
+      waterCapacity: "260 gallons",
+      weight: "500 lbs (dry)",
+    },
+  },
+];
+
 const ProductDetail: React.FC = () => {
   const { seriesId } = useParams<{ seriesId: string }>();
 
@@ -262,6 +314,9 @@ const ProductDetail: React.FC = () => {
   } else if (seriesId === "swim-series") {
     products = swimSeriesProducts;
     seriesTitle = "Performance Class Swim Series™";
+  } else if (seriesId === "stil-series") {
+    products = stilSeriesProducts;
+    seriesTitle = "Stil Modern Class";
   }
 
   if (products.length > 0) {
