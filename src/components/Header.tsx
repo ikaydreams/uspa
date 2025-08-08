@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { 
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -18,58 +18,40 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const hotTubSeries = [
-    {
-      name: "Elite Class M Series™",
-      href: "/series/m-series",
-    },
-    {
-      name: "Luxury Class A Series™",
-      href: "/series/a-series",
-    },
-    {
-      name: "Comfort Class X Series™",
-      href: "/series/x-series",
-    },
-    {
-      name: "Performance Class Swim Series™",
-      href: "/series/swim-series",
-    },
+    { name: "Elite Class M Series™", href: "/series/m-series" },
+    { name: "Luxury Class A Series™", href: "/series/a-series" },
+    { name: "Comfort Class X Series™", href: "/series/x-series" },
+    { name: "Performance Class Swim Series™", href: "/series/swim-series" },
+    { name: "Stil Modern Class", href: "/series/stil-series" },
   ];
 
   const navigation: NavItem[] = [
     { name: "Home", href: "/" },
-    // "Spa's" will be handled as a dropdown right after Home
-    { name: "Stores", href: "/stores" },
-    { name: "Our Difference", href: "/difference" },
+    { name: "Uw Voordeel", href: "/difference" },
     { name: "Company", href: "/company" },
-    { name: "Community", href: "/community" },
   ];
 
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <img 
-              src="/lovable-uploads/2629847b-6255-416f-853b-864c3cc3b629.png" 
-              alt="Uspa Logo" 
+            <img
+              src="/lovable-Uploads/2629847b-6255-416f-853b-864c3cc3b629.png"
+              alt="U-Spa Logo"
               className="h-10 w-10 mr-3"
             />
-            <h1 className="text-2xl font-poppins font-bold text-foreground">Uspa</h1>
+            <h1 className="text-2xl font-poppins font-bold text-foreground">U-Spa</h1>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
-                key="Home"
                 to="/"
                 className="font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200"
               >
                 Home
               </Link>
-              {/* Spa's Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200">
                   Spa's
@@ -99,7 +81,6 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -111,12 +92,10 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
               <Link
-                key="Home"
                 to="/"
                 className="block px-3 py-2 font-figtree text-foreground hover:text-muted-foreground transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
