@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, Waves, Sparkles, Heart, Flower } from "lucid
 
 const SpaDevicesCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsToShow, setItemsToShow] = useState(1); // Default to 1 for mobile
+  const [itemsToShow, setItemsToShow] = useState(3); // Default to 3 for desktop
 
   const devices = [
     {
@@ -47,9 +47,9 @@ const SpaDevicesCarousel = () => {
   // Update itemsToShow based on screen size
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) setItemsToShow(1); // Mobile
-      else if (window.innerWidth < 1024) setItemsToShow(2); // Tablet
-      else setItemsToShow(3); // Desktop
+      if (window.innerWidth < 640) setItemsToShow(1); // Mobile: 1 item
+      else if (window.innerWidth < 1024) setItemsToShow(2); // Tablet: 2 items
+      else setItemsToShow(3); // Desktop: 3 items
     };
     handleResize(); // Set initial value
     window.addEventListener("resize", handleResize);
@@ -86,7 +86,7 @@ const SpaDevicesCarousel = () => {
               style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
             >
               {devices.map((device) => (
-                <div key={device.id} className="w-full flex-shrink-0">
+                <div key={device.id} className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0">
                   <Card className="bg-card border-border h-full hover:shadow-elegant transition-all duration-300 group">
                     <div className="relative h-48 overflow-hidden rounded-t-lg">
                       <img
