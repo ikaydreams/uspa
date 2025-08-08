@@ -92,15 +92,15 @@ const HeroBanner = () => {
 
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors duration-200"
+        className="absolute left-2 sm:left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-2 sm:p-2 md:p-3 rounded-full transition-colors duration-200"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={20} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors duration-200"
+        className="absolute right-2 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-2 sm:p-2 md:p-3 rounded-full transition-colors duration-200"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={20} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
       </button>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
