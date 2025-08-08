@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight, Waves, Sparkles, Heart, Flower } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom"; // Import Link
 
 const SpaDevicesCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsToShow, setItemsToShow] = useState(3); // Default to 3 for desktop
+  const [itemsToShow, setItemsToShow] = useState(3);
 
   const devices = [
     {
@@ -13,7 +14,7 @@ const SpaDevicesCarousel = () => {
       description: "Ervaar ongeëvenaarde luxe met de M Series™, met veelzijdige opstellingen, 16 verwisselbare JetPak®-massages en intuïtieve bediening voor een elite spa-ervaring.",
       features: ["Tot 16 JetPak®-massages", "Premium touchscreen bediening", "Simplicity® Filtratie", "CloudControl 2™ Wifi"],
       image: "/M8.webp",
-      link: "/series/m-series" // Relative path
+      link: "/series/m-series",
     },
     {
       id: 2,
@@ -21,7 +22,7 @@ const SpaDevicesCarousel = () => {
       description: "De A9L biedt plaats aan 9 personen met 7 JetPak®-zetels en een luxe ligstoel, ideaal voor sociale bijeenkomsten en gepersonaliseerde hydrotherapie.",
       features: ["9 zitplaatsen", "7 JetPak®-zetels", "Simplicity® Filtratie", "Premium waterval"],
       image: "/A9L_Top-Down.webp",
-      link: "/series/a-series" // Relative path
+      link: "/series/a-series",
     },
     {
       id: 3,
@@ -29,7 +30,7 @@ const SpaDevicesCarousel = () => {
       description: "De STIL 6 combineert strakke lijnen met geavanceerde hydrotherapie voor een compacte, luxe spa-ervaring.",
       features: ["JetPak Therapy System", "Compact modern design", "Energiezuinige technologie", "LED-verlichting"],
       image: "/STIL-7_top-down.webp",
-      link: "/series/stil-series" // Relative path
+      link: "/series/stil-series",
     },
     {
       id: 4,
@@ -37,7 +38,7 @@ const SpaDevicesCarousel = () => {
       description: "De A8L biedt 7 zitplaatsen, inclusief een premium ligstoel en 6 JetPak®-opties, perfect voor koppels of gezinnen die variatie zoeken in ontspanning.",
       features: ["7 zitplaatsen", "6 JetPak®-zetels", "Touchscreen bediening", "LED-verlichting"],
       image: "https://www.bullfrogspas.com/wp-content/uploads/2024/05/A8_Top-Down.png",
-      link: "/series/a-series" // Relative path
+      link: "/series/a-series",
     },
     {
       id: 5,
@@ -45,18 +46,17 @@ const SpaDevicesCarousel = () => {
       description: "De X Series™ combineert betaalbare luxe met duurzame EnduraFrame™-constructie, efficiënte waterfiltratie en aanpasbare LED-verlichting.",
       features: ["EnduraFrame™ constructie", "Efficiënte filtratie", "LED-verlichting", "Betaalbare luxe"],
       image: "/X8_Select_Snow_Top.webp",
-      link: "/series/x-series" // Relative path
-    }
+      link: "/series/x-series",
+    },
   ];
 
-  // Update itemsToShow based on screen size
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) setItemsToShow(1); // Mobile: 1 item
-      else if (window.innerWidth < 1024) setItemsToShow(2); // Tablet: 2 items
-      else setItemsToShow(3); // Desktop: 3 items
+      if (window.innerWidth < 640) setItemsToShow(1);
+      else if (window.innerWidth < 1024) setItemsToShow(2);
+      else setItemsToShow(3);
     };
-    handleResize(); // Set initial value
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -92,7 +92,7 @@ const SpaDevicesCarousel = () => {
             >
               {devices.map((device) => (
                 <div key={device.id} className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0">
-                  <a href={device.link} target="_blank" rel="noopener noreferrer">
+                  <Link to={device.link} target="_blank" rel="noopener noreferrer">
                     <Card className="bg-card border-border h-full hover:shadow-elegant transition-all duration-300 group cursor-pointer">
                       <div className="relative h-48 overflow-hidden rounded-t-lg">
                         <img
@@ -104,7 +104,6 @@ const SpaDevicesCarousel = () => {
                       </div>
                       <CardContent className="p-6">
                         <div className="flex items-center gap-2 mb-3">
-                          {device.icon}
                           <h3 className="text-xl font-poppins font-bold">
                             {device.name}
                           </h3>
@@ -127,13 +126,12 @@ const SpaDevicesCarousel = () => {
                         </div>
                       </CardContent>
                     </Card>
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
