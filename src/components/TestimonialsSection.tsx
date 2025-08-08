@@ -1,67 +1,151 @@
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const TestimonialsSection = () => {
-  const testimonials = [
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const experiences = [
     {
-      name: "Sarah van Berg",
-      rating: 5,
-      text: "Absoluut geweldige ervaring! De behandelingen zijn van topkwaliteit en het personeel is zeer professioneel. Ik kom hier regelmatig voor mijn massage therapie.",
-      treatment: "Massage Therapie"
+      id: 1,
+      quote: "De JetPak-technologie biedt een ongeëvenaarde massage-ervaring, perfect afgestemd op mijn behoeften!",
+      author: "Anneke V.",
+      role: "Tevreden klant",
+      treatment: "M Series Spa",
+      image: "https://via.placeholder.com/150",
     },
     {
-      name: "Michael de Vries",
-      rating: 5,
-      text: "De hydrotherapie faciliteiten zijn fantastisch. Een echte oase van rust midden in de stad. Zeer aan te bevelen voor iedereen die wil ontspannen.",
-      treatment: "Hydrotherapie"
+      id: 2,
+      quote: "Mijn Bullfrog Spa is een oase van rust; de installatie door U-Spa was vlekkeloos.",
+      author: "Mark D.",
+      role: "Wellness liefhebber",
+      treatment: "A Series A9L",
+      image: "https://via.placeholder.com/150",
     },
     {
-      name: "Emma Jansen",
-      rating: 5,
-      text: "Mijn gezichtsbehandeling was perfect! Mijn huid voelt zo zacht en stralend. Het team weet echt waar ze mee bezig zijn.",
-      treatment: "Gezichtsbehandeling"
-    }
+      id: 3,
+      quote: "De STIL 7 past perfect in mijn moderne tuin en biedt ongeëvenaard comfort.",
+      author: "Sophie K.",
+      role: "Design enthousiast",
+      treatment: "STIL 7 Spa",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      id: 4,
+      quote: "Dankzij U-Spa’s professionele service geniet ik dagelijks van mijn X Series spa.",
+      author: "Tom R.",
+      role: "Huiseigenaar",
+      treatment: "X Series Spa",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      id: 5,
+      quote: "De Swim Series is perfect voor mijn fitnessroutine en familieplezier!",
+      author: "Lisa M.",
+      role: "Fitness coach",
+      treatment: "S150 Swim Spa",
+      image: "https://via.placeholder.com/150",
+    },
   ];
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % experiences.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + experiences.length) % experiences.length);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const getVisibleSlides = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentSlide + i) % experiences.length;
+      visible.push(experiences[index]);
+    }
+    return visible;
+  };
+
   return (
-    <section className="py-20 bg-muted/20">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-poppins font-bold mb-6">
             Wat Onze Klanten Zeggen
           </h2>
           <p className="text-lg font-figtree text-muted-foreground max-w-2xl mx-auto">
-            Lees de ervaringen van onze tevreden klanten en ontdek waarom 
-            zij kiezen voor Uspa voor hun welzijn en ontspanning.
+            Ontdek waarom onze klanten steeds terugkomen voor de unieke U-Spa-ervaring.
+            Lees hun persoonlijke verhalen en transformaties.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-background hover:shadow-elegant transition-shadow duration-300">
-              <CardContent className="p-8">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      className="w-5 h-5 fill-foreground text-foreground"
+        <div className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {getVisibleSlides().map((experience, index) => (
+              <Card
+                key={`${experience.id}-${currentSlide}`}
+                className={`bg-card border-border hover:shadow-elegant transition-all duration-500 animate-fade-in ${
+                  index === 1 ? "lg:scale-105 lg:shadow-elegant" : ""
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-8">
+                  <Quote className="w-8 h-8 text-muted-foreground mb-4" />
+                  <blockquote className="font-figtree text-foreground leading-relaxed mb-6 italic">
+                    "{experience.quote}"
+                  </blockquote>
+                  <div className="flex items-center">
+                    <img
+                      src={experience.image}
+                      alt={experience.author}
+                      className="w-12 h-12 rounded-full object-cover mr-4"
                     />
-                  ))}
-                </div>
-                <p className="font-figtree text-foreground mb-6 leading-relaxed italic">
-                  "{testimonial.text}"
-                </p>
-                <div className="border-t border-border pt-4">
-                  <h4 className="font-poppins font-semibold text-foreground">
-                    {testimonial.name}
-                  </h4>
-                  <p className="font-figtree text-sm text-muted-foreground">
-                    {testimonial.treatment}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                    <div>
+                      <h4 className="font-poppins font-semibold text-foreground">
+                        {experience.author}
+                      </h4>
+                      <p className="font-figtree text-sm text-muted-foreground">
+                        {experience.role}
+                      </p>
+                      <p className="font-figtree text-xs text-muted-foreground mt-1">
+                        {experience.treatment}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="flex justify-center items-center mt-12 space-x-4">
+            <button
+              onClick={prevSlide}
+              className="bg-card border border-border hover:bg-accent text-foreground p-3 rounded-full transition-colors duration-200 shadow-soft"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <div className="flex space-x-2">
+              {experiences.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                    index === currentSlide ? "bg-foreground w-6" : "bg-muted-foreground"
+                  }`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={nextSlide}
+              className="bg-card border border-border hover:bg-accent text-foreground p-3 rounded-full transition-colors duration-200 shadow-soft"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
         </div>
       </div>
     </section>
