@@ -1,5 +1,4 @@
 import HeroBanner from "@/components/HeroBanner";
-import SpaDevicesCarousel from "@/components/SpaDevicesCarousel";
 import ServicesSection from "@/components/ServicesSection";
 import SpaLocationsCarousel from "@/components/SpaLocationsCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -16,7 +15,6 @@ const Index = () => {
           Ontdek ons assortiment innovatieve spa-apparaten, ontworpen voor comfort en prestaties. Elk model is uitgerust met aanpasbare jets, energiebesparende technologie en een modern ontwerp dat past bij uw levensstijl.
         </p>
       </section>
-      <SpaDevicesCarousel />
       <ServicesSection />
       <SpaLocationsCarousel />
       <TestimonialsSection />
