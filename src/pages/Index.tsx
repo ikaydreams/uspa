@@ -17,7 +17,7 @@ const Index = () => {
         </p>
       </section>
       <SpaDevicesCarousel />
-      <ServicesSection />
+      
       <SpaLocationsCarousel />
       <TestimonialsSection />
       <ContactSection />
