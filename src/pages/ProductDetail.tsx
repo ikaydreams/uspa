@@ -344,7 +344,7 @@ const ProductDetail: React.FC = () => {
                 ))}
               </ul>
               <Button asChild>
-                <Link to="/stores">Find a Store</Link>
+                <Link to="/stores">Download Brochure</Link>
               </Button>
             </div>
           ))}
