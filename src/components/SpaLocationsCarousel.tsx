@@ -24,7 +24,7 @@ const SpaDevicesCarousel = () => {
     },
     {
       id: 3,
-      name: "STIL 6 Hot Tub",
+      name: "STIL 6 Hot Tub - Stil Modern Class™",
       description: "De STIL 6 combineert strakke lijnen met geavanceerde hydrotherapie voor een compacte, luxe spa-ervaring.",
       features: ["JetPak Therapy System", "Compact modern design", "Energiezuinige technologie", "LED-verlichting"],
      
