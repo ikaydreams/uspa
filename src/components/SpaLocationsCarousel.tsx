@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom"; // Import Link
 
 const SpaDevicesCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(3);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const devices = [
     {
@@ -71,6 +72,11 @@ const SpaDevicesCarousel = () => {
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
 
+  // Handle image click to redirect
+  const handleImageClick = (link) => {
+    navigate(link);
+  };
+
   return (
     <section className="py-20 bg-muted/10">
       <div className="container mx-auto px-4 lg:px-8">
@@ -92,41 +98,42 @@ const SpaDevicesCarousel = () => {
             >
               {devices.map((device) => (
                 <div key={device.id} className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0">
-                  <Link to={device.link} target="_blank" rel="noopener noreferrer">
-                    <Card className="bg-card border-border h-full hover:shadow-elegant transition-all duration-300 group cursor-pointer">
-                      <div className="relative h-48 overflow-hidden rounded-t-lg">
-                        <img
-                          src={device.image}
-                          alt={device.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                  <Card className="bg-card border-border h-full hover:shadow-elegant transition-all duration-300 group cursor-pointer">
+                    <div 
+                      className="relative h-48 overflow-hidden rounded-t-lg"
+                      onClick={() => handleImageClick(device.link)} // Redirect on image click
+                    >
+                      <img
+                        src={device.image}
+                        alt={device.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                    </div>
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <h3 className="text-xl font-poppins font-bold">
+                          {device.name}
+                        </h3>
                       </div>
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-2 mb-3">
-                          <h3 className="text-xl font-poppins font-bold">
-                            {device.name}
-                          </h3>
+                      <p className="font-figtree text-muted-foreground mb-4 text-sm leading-relaxed">
+                        {device.description}
+                      </p>
+                      <div className="border-t border-border pt-4">
+                        <p className="text-sm font-semibold mb-2">Kenmerken:</p>
+                        <div className="flex flex-wrap gap-1">
+                          {device.features.map((feature, index) => (
+                            <span 
+                              key={index}
+                              className="text-xs bg-accent text-accent-foreground px-2 py-1 rounded-full"
+                            >
+                              {feature}
+                            </span>
+                          ))}
                         </div>
-                        <p className="font-figtree text-muted-foreground mb-4 text-sm leading-relaxed">
-                          {device.description}
-                        </p>
-                        <div className="border-t border-border pt-4">
-                          <p className="text-sm font-semibold mb-2">Kenmerken:</p>
-                          <div className="flex flex-wrap gap-1">
-                            {device.features.map((feature, index) => (
-                              <span 
-                                key={index}
-                                className="text-xs bg-accent text-accent-foreground px-2 py-1 rounded-full"
-                              >
-                                {feature}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               ))}
             </div>
