@@ -32,7 +32,7 @@ const Footer = () => {
               <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Home</a></li>
               <li><a href="#spas" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Spa's</a></li>
               <li><a href="#difference" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Uw Voordeel</a></li>
-              <li><a href="#company" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Company</a></li>
+              <li><a href="#company" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">Over Ons</a></li>
             </ul>
           </div>
 
