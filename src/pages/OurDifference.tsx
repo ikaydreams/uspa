@@ -21,7 +21,7 @@ const OurDifference = () => {
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
               <h2 className="text-xl font-poppins font-semibold mb-2">90% minder leidingen</h2>
-              <p className="text-base font-sans text-muted-foreground">
+              <p className="text-base font-sans text-black">
                 Bullfrog Spa's zijn de zuinigste ter wereld en warmtepomp ready. De volledige schuimisolatie zorgt ervoor dat er geen energie verloren gaat. Daarnaast heeft een Bullfrog Spa 90% minder leidingen dan de concurrentie.
               </p>
             </div>
