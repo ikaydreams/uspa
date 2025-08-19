@@ -33,7 +33,7 @@ const OurDifference = () => {
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
               <h2 className="text-xl font-poppins font-semibold mb-2">JetPaks</h2>
-              <p className="text-base font-sans text-muted-foreground">
+              <p className="text-base font-sans text-black">
                 Met 16 verschillende JetPaks kiest u precies de massage die bij ú past. En dankzij de variërende zithoogtes vindt iedereen – van klein tot groot – moeiteloos zijn ideale relaxplek!
               </p>
             </div>
@@ -45,7 +45,7 @@ const OurDifference = () => {
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
               <h2 className="text-xl font-poppins font-semibold mb-2">Endura Frame</h2>
-              <p className="text-base font-sans text-muted-foreground">
+              <p className="text-base font-sans text-black">
                 Alle Bullfrog Spa's bestaan uit een duurzaam, en volledig gesloten onderstel: Endura Frame™. Het is hout en metaalvrij, zodat het niet kan verweren of roesten. Deze constructie garandeert een lange levensduur.
               </p>
             </div>
@@ -57,7 +57,7 @@ const OurDifference = () => {
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
               <h2 className="text-xl font-poppins font-semibold mb-2">Massage voor het oor</h2>
-              <p className="text-base font-sans text-muted-foreground">
+              <p className="text-base font-sans text-black">
                 De audiosystemen met onzichtbare luidsprekers en subwoofer in onze Bullfrog spa's zorgen voor ontspanning en helpen de bloeddruk te verlagen.
               </p>
             </div>
@@ -69,7 +69,7 @@ const OurDifference = () => {
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
               <h2 className="text-xl font-poppins font-semibold mb-2">Eenvoudig reinigen</h2>
-              <p className="text-base font-sans text-muted-foreground">
+              <p className="text-base font-sans text-black">
                 Acryl-oppervlakken zijn poriënvrij, vlak en zeer eenvoudig te reinigen. Wij raden regelmatig onderhoud met vloeibare, niet-krassende middelen aan om de glans te behouden.
               </p>
             </div>
@@ -81,7 +81,7 @@ const OurDifference = () => {
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
               <h2 className="text-xl font-poppins font-semibold mb-2">Uw spa inruilen?</h2>
-              <p className="text-base font-sans text-muted-foreground">
+              <p className="text-base font-sans text-black">
                 Indien u uw huidige spa wilt ruilen voor een nieuwe, neem dan gerust contact met ons op. Wij kopen uw oude spa graag terug, ook na jaren van intensief gebruik.
               </p>
             </div>
