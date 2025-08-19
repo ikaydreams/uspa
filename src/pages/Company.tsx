@@ -20,7 +20,7 @@ const Company = () => {
                 className="w-full h-48 object-cover rounded-t-2xl"
               />
               <CardContent className="p-6">
-                <h2 className="text-xl font-semibold mb-2 text-white">Persoonlijk Contact</h2>
+                <h2 className="text-xl mb-2 text-white">Persoonlijk Contact</h2>
                 <p className="text-base text-white">
                   Geen betere klant dan een fitte klant die optimaal geniet van zijn Bullfrog U-Spa.
                 </p>
@@ -34,7 +34,7 @@ const Company = () => {
                 className="w-full h-48 object-cover rounded-t-2xl"
               />
               <CardContent className="p-6">
-                <h2 className="text-xl font-semibold mb-2 text-white">Keuze voor Kwaliteit</h2>
+                <h2 className="text-xl mb-2 text-white">Keuze voor Kwaliteit</h2>
                 <p className="text-base text-white">
                   Voor U-Spa is sales pas echt succesvol wanneer een klant de naam U-Spa enthousiast doorgeeft aan vrienden.
                 </p>
@@ -48,7 +48,7 @@ const Company = () => {
                 className="w-full h-48 object-cover rounded-t-2xl"
               />
               <CardContent className="p-6">
-                <h2 className="text-xl font-semibold mb-2 text-white">Professionele Installatie</h2>
+                <h2 className="text-xl mb-2 text-white">Professionele Installatie</h2>
                 <p className="text-base text-white">
                   Van plaatsing tot aftersales. Geen stress met U-Spa.
                 </p>
@@ -56,45 +56,56 @@ const Company = () => {
             </Card>
           </div>
 
-          {/* Section 3: About Text */}
+          {/* Section 3: Advantages Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {[
+              "JetPak Technologie",
+              "Houtloze constructie",
+              "Warmtepomp ready",
+              "Voor alle lichaamslengtes",
+              "Optimale Power en veiligheid",
+              "Energiezuinig",
+              "Behoudt van waarde bij inruil, zelfs na jaren"
+            ].map((advantage, idx) => (
+              <Card
+                key={idx}
+                className="shadow-md hover:shadow-lg transition-shadow rounded-2xl bg-transparent border border-gray-700"
+              >
+                <CardContent className="p-6 text-center">
+                  <p className="text-lg text-white">{advantage}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Section 4: About Text */}
           <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
-  <p className="text-lg text-white">
-    Wij verkopen een kwaliteitsproduct met talloze voordelen, zoals onze innovatieve 
-    <span className="font-semibold"> JetPak Technologie</span>, een 
-    <span className="font-semibold"> houtloze constructie</span> en 
-    <span className="font-semibold"> warmtepomp ready</span> systemen. 
-    Voor alle lichaamslengtes bieden wij optimaal comfort, gecombineerd met 
-    <span className="font-semibold"> maximale power en veiligheid</span>. 
-    Bovendien zijn onze spa’s uitzonderlijk <span className="font-semibold"> energiezuinig</span> 
-    en behouden ze hun waarde, zelfs na jaren van gebruik.
-  </p>
+            <p className="text-lg text-white">
+              Ons U-Spa Team weet als geen ander hoe zij de optimale installatie van een Bullfrog Spa moeten verzorgen.
+            </p>
+            <p className="text-lg text-white">
+              Dankzij onze ruime ervaring met de levering van buitenspa’s weten wij precies waar we op moeten letten – van plaatsing tot aftersales.
+            </p>
+            <p className="text-lg text-white">
+              Wij bieden geen product, maar een exclusieve beleving.
+            </p>
+          </div>
 
-  <p className="text-lg text-white">
-    Ons U-Spa Team weet als geen ander hoe zij de optimale installatie van een Bullfrog Spa 
-    moeten verzorgen. Dankzij onze ruime ervaring met de levering van buitenspa’s weten wij 
-    precies waar we op moeten letten – van plaatsing tot aftersales.
-  </p>
-
-  <p className="text-lg text-white">
-    Wij bieden geen product, maar een <span className="font-semibold">exclusieve beleving</span>.
-  </p>
-</div>
-
-          {/* Section 4: Contact + Image */}
+          {/* Section 5: Contact + Image */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Contact Info */}
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold mb-4 text-white">Contactgegevens</h2>
+              <h2 className="text-2xl mb-4 text-white">Contactgegevens</h2>
               <div>
-                <h3 className="font-bold text-white">Telefoon</h3>
+                <h3 className="text-white">Telefoon</h3>
                 <p className="text-white">+31 (0) 85 022 0799</p>
               </div>
               <div>
-                <h3 className="font-bold text-white">E-mail</h3>
+                <h3 className="text-white">E-mail</h3>
                 <p className="text-white">info@u-spawellness.nl</p>
               </div>
               <div>
-                <h3 className="font-bold text-white">Adres</h3>
+                <h3 className="text-white">Adres</h3>
                 <p className="text-white">
                   De Amstel 15<br />
                   8253 PC Dronten, Nederland
