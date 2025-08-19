@@ -9,21 +9,18 @@ const HeroBanner = () => {
     {
       id: 1,
       title: "U-Spa: Premium Bullfrog Spa’s",
-      subtitle: "Zuinig en Stil",
       description: "Ervaar design en comfort met JetPak-technologie, de zuinigste en stilste spa’s ter wereld.",
       image: "/U-Spa-visual.jpg",
     },
     {
       id: 2,
       title: "Uw Persoonlijke Wellness",
-      subtitle: "Op Maat Gemaakt",
       description: "Geniet van massages op maat met 16 verwisselbare JetPaks, geschikt voor elke lichaamslengte.",
       image: "/Girl.jpg",
     },
     {
       id: 3,
       title: "Stressvrij Genieten",
-      subtitle: "Professionele Installatie",
       description: "U-Spa levert en onderhoudt uw droomspa voor een exclusieve wellness-ervaring thuis.",
       image: "/Woman.jpg",
     },
@@ -38,7 +35,7 @@ const HeroBanner = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(nextSlide, 10000);
     return () => clearInterval(timer);
   }, []);
 
@@ -60,12 +57,9 @@ const HeroBanner = () => {
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="relative z-10 h-full flex items-center justify-center">
               <div className="text-center text-white max-w-4xl px-4">
-                <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-4">
+                <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-4">
                   {slide.title}
                 </h1>
-                <h2 className="text-2xl md:text-3xl font-poppins mb-6">
-                  {slide.subtitle}
-                </h2>
                 <p className="text-lg md:text-xl font-figtree mb-8 max-w-2xl mx-auto">
                   {slide.description}
                 </p>
