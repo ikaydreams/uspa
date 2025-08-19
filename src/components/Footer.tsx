@@ -39,10 +39,10 @@ const Footer = () => {
           <div>
             <h4 className="font-poppins font-semibold text-lg mb-4">Contact</h4>
             <div className="space-y-2 font-figtree text-primary-foreground/80">
-              <p>Wellness Street 123</p>
-              <p>1234 AB Amsterdam</p>
-              <p>+31 20 123 4567</p>
-              <p>info@uspa.nl</p>
+              <p>06 25 071 071</p>
+              <p>info@u-spa.nl</p>
+              <p>Herenweg 64</p>
+              <p>3602 AR Maarssenm</p>
             </div>
           </div>
         </div>
