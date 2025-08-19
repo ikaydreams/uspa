@@ -3,7 +3,7 @@ import SpaDevicesCarousel from "@/components/SpaDevicesCarousel";
 import ServicesSection from "@/components/ServicesSection";
 import SpaLocationsCarousel from "@/components/SpaLocationsCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import ContactSection from "@/components/ContactSection";
+
 import Footer from "@/components/Footer";
 import ContactAndBullfrogSection from "@/components/ContactAndBullfrogSection";
 
