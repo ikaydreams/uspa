@@ -20,7 +20,7 @@ const Index = () => {
       </section>
       <SpaLocationsCarousel />
       <TestimonialsSection />
-      <ContactSection />
+      
       <Footer />
     </div>
   );
