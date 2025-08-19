@@ -100,18 +100,20 @@ const Company = () => {
               <h2 className="text-2xl mb-4 text-white">Contactgegevens</h2>
               <div>
                 <h3 className="text-white">Telefoon</h3>
-                <p className="text-white">+31 (0) 85 022 0799</p>
+                <p className="text-white">06 25 071 071</p>
               </div>
               <div>
                 <h3 className="text-white">E-mail</h3>
-                <p className="text-white">info@u-spawellness.nl</p>
+                <p className="text-white">info@u-spa.nl</p>
               </div>
               <div>
                 <h3 className="text-white">Adres</h3>
                 <p className="text-white">
-                  De Amstel 15<br />
-                  8253 PC Dronten, Nederland
+                  Herenweg 64<br />
+                  3602 AR Maarssen
                 </p>
+                <p className="text-white">
+                  Maandag tot en met Zaterdag alleen op afspraak.<p/>
               </div>
             </div>
 
