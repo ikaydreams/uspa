@@ -38,7 +38,7 @@ const ContactAndBullfrogSection: FC = () => {
                   </div>
                   <div>
                     <h3 className="font-poppins font-semibold text-lg">Telefoon</h3>
-                    <p className="font-sans text-muted-foreground">+31 (0) 85 022 0799</p>
+                    <p className="font-sans text-muted-foreground">06 25 071 071</p>
                   </div>
                 </div>
               </CardContent>
@@ -51,7 +51,7 @@ const ContactAndBullfrogSection: FC = () => {
                   </div>
                   <div>
                     <h3 className="font-poppins font-semibold text-lg">E-mail</h3>
-                    <p className="font-sans text-muted-foreground">info@u-spawellness.nl</p>
+                    <p className="font-sans text-muted-foreground">info@u-spa.nl</p>
                   </div>
                 </div>
               </CardContent>
@@ -65,8 +65,8 @@ const ContactAndBullfrogSection: FC = () => {
                   <div>
                     <h3 className="font-poppins font-semibold text-lg">Adres</h3>
                     <p className="font-sans text-muted-foreground">
-                      De Amstel 15<br />
-                      8253 PC Dronten, Nederland
+                      Herenweg 64<br />
+                      3602 AR Maarssen
                     </p>
                   </div>
                 </div>
