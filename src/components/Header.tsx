@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   const navigation: NavItem[] = [
     { name: "Home", href: "/" },
     { name: "Uw Voordeel", href: "/difference" },
-    { name: "Company", href: "/company" },
+    { name: "Over Ons", href: "/company" },
   ];
 
   return (
