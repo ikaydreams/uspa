@@ -12,49 +12,51 @@ const Company = () => {
           </h1>
 
           {/* Section 2: Three Feature Blocks */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <Card className="shadow-md hover:shadow-lg transition-shadow rounded-2xl bg-transparent border border-gray-700">
-              <img
-                src="/images/FP Diensten_edited.jpg"
-                alt="Persoonlijk Contact"
-                className="w-full h-48 object-cover rounded-t-2xl"
-              />
-              <CardContent className="p-6">
-                <h2 className="text-xl mb-2 text-white">Persoonlijk Contact</h2>
-                <p className="text-base text-white">
-                  Geen betere klant dan een fitte klant die optimaal geniet van zijn Bullfrog U-Spa.
-                </p>
-              </CardContent>
-            </Card>
+         
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+  <Card className="shadow-md hover:shadow-lg transition-shadow rounded-2xl bg-transparent border border-gray-700">
+    <img
+      src="https://static.wixstatic.com/media/25e0c0_2557dcd677eb442da5a47574b25241f1~mv2.jpg/v1/crop/x_14,y_0,w_315,h_315/fill/w_224,h_224,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/FP%20Diensten_edited.jpg"
+      alt="Persoonlijk Contact"
+      className="w-full h-48 object-cover rounded-t-2xl"
+    />
+    <CardContent className="p-6">
+      <h2 className="text-xl font-semibold mb-2 text-white">Persoonlijk Contact</h2>
+      <p className="text-base text-white">
+        Geen betere klant dan een fitte klant die optimaal geniet van zijn Bullfrog U-Spa.
+      </p>
+    </CardContent>
+  </Card>
 
-            <Card className="shadow-md hover:shadow-lg transition-shadow rounded-2xl bg-transparent border border-gray-700">
-              <img
-                src="/images/fivestar-300x300_edited_edited.jpg"
-                alt="Keuze voor Kwaliteit"
-                className="w-full h-48 object-cover rounded-t-2xl"
-              />
-              <CardContent className="p-6">
-                <h2 className="text-xl mb-2 text-white">Keuze voor Kwaliteit</h2>
-                <p className="text-base text-white">
-                  Voor U-Spa is sales pas echt succesvol wanneer een klant de naam U-Spa enthousiast doorgeeft aan vrienden.
-                </p>
-              </CardContent>
-            </Card>
+  <Card className="shadow-md hover:shadow-lg transition-shadow rounded-2xl bg-transparent border border-gray-700">
+    <img
+      src="https://static.wixstatic.com/media/25e0c0_725640aa36544163b871af23113a5827~mv2.jpg/v1/fill/w_224,h_224,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fivestar-300x300_edited_edited.jpg"
+      alt="Keuze voor Kwaliteit"
+      className="w-full h-48 object-cover rounded-t-2xl"
+    />
+    <CardContent className="p-6">
+      <h2 className="text-xl font-semibold mb-2 text-white">Keuze voor Kwaliteit</h2>
+      <p className="text-base text-white">
+        Voor U-Spa is sales pas echt succesvol wanneer een klant de naam U-Spa enthousiast doorgeeft aan vrienden.
+      </p>
+    </CardContent>
+  </Card>
 
-            <Card className="shadow-md hover:shadow-lg transition-shadow rounded-2xl bg-transparent border border-gray-700">
-              <img
-                src="/images/VB Spa Adv_edited_edited_edited.jpg"
-                alt="Professionele Installatie"
-                className="w-full h-48 object-cover rounded-t-2xl"
-              />
-              <CardContent className="p-6">
-                <h2 className="text-xl mb-2 text-white">Professionele Installatie</h2>
-                <p className="text-base text-white">
-                  Van plaatsing tot aftersales. Geen stress met U-Spa.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+  <Card className="shadow-md hover:shadow-lg transition-shadow rounded-2xl bg-transparent border border-gray-700">
+    <img
+      src="https://static.wixstatic.com/media/25e0c0_b4d4feabd7684562bdb29103f9f8b354~mv2.jpg/v1/fill/w_251,h_224,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/VB%20Spa%20Adv_edited_edited_edited.jpg"
+      alt="Professionele Installatie"
+      className="w-full h-48 object-cover rounded-t-2xl"
+    />
+    <CardContent className="p-6">
+      <h2 className="text-xl font-semibold mb-2 text-white">Professionele Installatie</h2>
+      <p className="text-base text-white">
+        Van plaatsing tot aftersales. Geen stress met U-Spa.
+      </p>
+    </CardContent>
+  </Card>
+</div>
+
 
           {/* Section 3: Advantages Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
