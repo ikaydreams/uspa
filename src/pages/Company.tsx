@@ -57,27 +57,28 @@ const Company = () => {
           </div>
 
           {/* Section 3: About Text */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-lg text-white mb-4">
-              Wij verkopen een kwaliteitsproduct met talloze voordelen, zoals:
-            </p>
-            <ul className="list-disc list-inside text-white text-left inline-block mb-4">
-              <li>JetPak Technologie</li>
-              <li>Houtloze constructie</li>
-              <li>Warmtepomp ready</li>
-              <li>Voor alle lichaamslengtes</li>
-              <li>Optimale Power en veiligheid</li>
-              <li>Energiezuinig</li>
-              <li>Behoudt van waarde bij inruil, zelfs na jaren</li>
-            </ul>
-            <p className="text-lg text-white mb-4">
-              Ons U-Spa Team weet als geen ander hoe zij de optimale installatie van een Bullfrog Spa moeten verzorgen. 
-            </p>
-            <p className="text-lg text-white">
-              Wij hebben veel ervaring met de levering van de buitenspa’s en weten precies waar we op moeten letten. 
-              Wij bieden geen product, maar een exclusieve beleving.
-            </p>
-          </div>
+          <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
+  <p className="text-lg text-white">
+    Wij verkopen een kwaliteitsproduct met talloze voordelen, zoals onze innovatieve 
+    <span className="font-semibold"> JetPak Technologie</span>, een 
+    <span className="font-semibold"> houtloze constructie</span> en 
+    <span className="font-semibold"> warmtepomp ready</span> systemen. 
+    Voor alle lichaamslengtes bieden wij optimaal comfort, gecombineerd met 
+    <span className="font-semibold"> maximale power en veiligheid</span>. 
+    Bovendien zijn onze spa’s uitzonderlijk <span className="font-semibold"> energiezuinig</span> 
+    en behouden ze hun waarde, zelfs na jaren van gebruik.
+  </p>
+
+  <p className="text-lg text-white">
+    Ons U-Spa Team weet als geen ander hoe zij de optimale installatie van een Bullfrog Spa 
+    moeten verzorgen. Dankzij onze ruime ervaring met de levering van buitenspa’s weten wij 
+    precies waar we op moeten letten – van plaatsing tot aftersales.
+  </p>
+
+  <p className="text-lg text-white">
+    Wij bieden geen product, maar een <span className="font-semibold">exclusieve beleving</span>.
+  </p>
+</div>
 
           {/* Section 4: Contact + Image */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
