@@ -113,7 +113,7 @@ const Company = () => {
                   3602 AR Maarssen
                 </p>
                 <p className="text-white">
-                  Maandag tot en met Zaterdag alleen op afspraak.<p/>
+                  Maandag tot en met Zaterdag alleen op afspraak.</p>
               </div>
             </div>
 
