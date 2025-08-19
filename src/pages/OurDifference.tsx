@@ -16,7 +16,7 @@ const OurDifference = () => {
             {/* Block 1: 90% minder leidingen */}
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <img
-                src="/images/Girl in sun 10x5.jpg" // Replace with actual image path
+                src="https://static.wixstatic.com/media/25e0c0_edd8bbd1f7dd45f795aef934f8651ba2~mv2.jpg/v1/fill/w_393,h_264,al_c,q_80,usm_0.66_1.00_0.01/25e0c0_edd8bbd1f7dd45f795aef934f8651ba2~mv2.jpg"
                 alt="90% minder leidingen"
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
@@ -28,7 +28,7 @@ const OurDifference = () => {
             {/* Block 2: JetPaks */}
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <img
-                src="/images/U-SPA Energizes You logo.jpg" // Replace with actual image path
+                src="https://static.wixstatic.com/media/25e0c0_d701f0cfa7ee4e5db61641e6aa714c1e~mv2.jpg/v1/fill/w_393,h_264,al_c,q_80,usm_0.66_1.00_0.01/25e0c0_d701f0cfa7ee4e5db61641e6aa714c1e~mv2.jpg"
                 alt="JetPaks"
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
@@ -40,7 +40,7 @@ const OurDifference = () => {
             {/* Block 3: Endura Frame */}
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <img
-                src="/images/U-Spa Excellent 1_edited.png" // Replace with actual image path
+                src="https://static.wixstatic.com/media/25e0c0_0d41894a1333460f9e5d63859c3f421f~mv2.jpg/v1/fill/w_393,h_264,al_c,q_80,usm_0.66_1.00_0.01/25e0c0_0d41894a1333460f9e5d63859c3f421f~mv2.jpg"
                 alt="Endura Frame"
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
@@ -52,7 +52,7 @@ const OurDifference = () => {
             {/* Block 4: Massage voor het oor */}
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <img
-                src="/images/fivestar-300x300_edited_edited.jpg" // Replace with actual image path
+                src="https://static.wixstatic.com/media/25e0c0_86aab769df8645cd9f370c24030a32c2~mv2.jpg/v1/fill/w_314,h_267,al_c,q_80,usm_0.66_1.00_0.01/25e0c0_86aab769df8645cd9f370c24030a32c2~mv2.jpg"
                 alt="Massage voor het oor"
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
@@ -64,7 +64,7 @@ const OurDifference = () => {
             {/* Block 5: Eenvoudig reinigen */}
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <img
-                src="/images/FP Diensten_edited.jpg" // Replace with actual image path
+                src="https://static.wixstatic.com/media/25e0c0_6d331fee79b2495a903c0307cae16b89~mv2.png/v1/fill/w_393,h_379,al_c,q_80,usm_0.66_1.00_0.01/25e0c0_6d331fee79b2495a903c0307cae16b89~mv2.png"
                 alt="Eenvoudig reinigen"
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
@@ -76,7 +76,7 @@ const OurDifference = () => {
             {/* Block 6: Uw spa inruilen? */}
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <img
-                src="/images/VB Spa Adv_edited_edited_edited.jpg" // Replace with actual image path
+                src="https://static.wixstatic.com/media/25e0c0_b8504216ae944cce89ea555b9f03a5c2~mv2.jpg/v1/fill/w_393,h_323,al_c,q_80,usm_0.66_1.00_0.01/25e0c0_b8504216ae944cce89ea555b9f03a5c2~mv2.jpg"
                 alt="Uw spa inruilen?"
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />
