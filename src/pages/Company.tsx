@@ -119,12 +119,12 @@ const Company = () => {
 
             {/* Contact Image */}
             <div>
-              <img
-                src="/images/U-Spa Excellent 1_edited.png"
-                alt="U-Spa Wellness"
-                className="w-full h-80 object-cover rounded-2xl shadow-md"
-              />
-            </div>
+  <img
+    src="https://static.wixstatic.com/media/25e0c0_535c374e230941b483f1146da6db1cc2~mv2.jpg/v1/fill/w_700,h_580,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/25e0c0_535c374e230941b483f1146da6db1cc2~mv2.jpg"
+    alt="U-Spa Wellness"
+    className="w-full h-80 object-cover rounded-2xl shadow-md"
+  />
+</div>
           </div>
         </div>
       </main>
